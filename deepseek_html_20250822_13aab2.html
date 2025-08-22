@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahdi Sultan | Bangladeshi Singer-Songwriter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1DB954;
+            --secondary: #006A4E;
+            --accent: #F42A41;
+            --accent2: #FF0000;
+            --accent3: #00F2EA;
+            --dark: #121212;
+            --light: #f8f9fa;
+            --text: #e0e0e0;
+            --gray: #b3b3b3;
+            --card-bg: rgba(30, 30, 30, 0.8);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #191414 100%);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            background-blend-mode: overlay;
+            background-color: rgba(0, 0, 0, 0.85);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            background: rgba(18, 18, 18, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        header.scrolled {
+            padding: 15px 0;
+            background: rgba(18, 18, 18, 0.98);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--light);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--primary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: var(--text);
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            padding: 15px 0;
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            padding: 0 15px;
+        }
+        
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-right: 5px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 100px 0 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .profile-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 30px;
+            border: 5px solid var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero h1 span {
+            color: var(--primary);
+        }
+        
+        .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--gray);
+            font-weight: 300;
+        }
+        
+        .hero-text {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--dark);
+            padding: 15px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(29, 185, 84, 0.4);
+        }
+        
+        .btn:hover {
+            background: #1ed760;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(29, 185, 84, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--dark);
+        }
+        
+        .btn-tiktok {
+            background: transparent;
+            border: 2px solid var(--accent3);
+            color: var(--accent3);
+        }
+        
+        .btn-tiktok:hover {
+            background: var(--accent3);
+            color: var(--dark);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--primary);
+            color: var(--dark);
+            transform: translateY(-5px);
+        }
+        
+        .social-icons a.yt:hover {
+            background: var(--accent2);
+            color: var(--light);
+        }
+        
+        .social-icons a.tiktok:hover {
+            background: var(--accent3);
+            color: var(--dark);
+        }
+        
+        /* Sections */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            display: inline-block;
+            position: relative;
+            padding-bottom: 15px;
+            color: var(--light);
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        /* Latest Release Section */
+        .latest-release {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .latest-release:hover {
+            transform: translateY(-10px);
+        }
+        
+        .album-art {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        
+        .album-art img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .release-info h3 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            color: var(--light);
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .release-date {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .spotify-btn {
+            display: inline-flex;
+            align-items: center;
+            background: var(--primary);
+            color: var(--dark);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .spotify-btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .spotify-btn:hover {
+            background: #1ed760;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(29, 185, 84, 0.5);
+        }
+        
+        /* Top Songs Section */
+        .top-songs {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .song-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 极式);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .song-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(29, 185, 84, 0.3);
+        }
+        
+        .song-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .song-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--light);
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .song-info {
+            font-size: 1rem;
+            color: var(--gray);
+            min-height: 60px;
+        }
+        
+        .song-views {
+            color: var(--accent2);
+            font-weight: 600;
+            margin-top: 10px;
+            display: block;
+        }
+        
+        .song-play {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .song-play i {
+            margin-right: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .song-play:hover {
+            color: #1ed760;
+        }
+        
+        .song-play:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Gallery Section */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        
+        /* Collaborations Section */
+        .artists-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .artist-card {
+            background: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+        }
+        
+        .artist-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(244, 42, 65, 0.3);
+        }
+        
+        .artist-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 3px solid var(--primary);
+        }
+        
+        .artist-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .artist-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--light);
+            margin-bottom: 10px;
+        }
+        
+        .artist-role {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .artist-song {
+            color: var(--gray);
+            font-style: italic;
+            margin-top: 10px;
+            font-size: 0.9rem;
+        }
+        
+        /* Artist Details Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1100;
+            overflow: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            color: var(--primary);
+        }
+        
+        .modal-artist-details {
+            text-align: center;
+        }
+        
+        .modal-artist-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 3px solid var(--primary);
+        }
+        
+        .modal-artist-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .modal-artist-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 10px;
+        }
+        
+        .modal-artist-role {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        
+        .modal-collab-details {
+            text-align: left;
+            margin-top: 20px;
+        }
+        
+        .modal-collab-details h4 {
+            color: var(--light);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .modal-collab-details p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        /* Live Events Section */
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .event-card {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(29, 185, 84, 0.3);
+        }
+        
+        .event-date {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 10px;
+            display: block;
+        }
+        
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--light);
+            margin-bottom: 15px;
+        }
+        
+        .event-location {
+            color: var(--gray);
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .event-description {
+            color: var(--text);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .event-ticket-btn {
+            display: inline-block;
+            background: var(--primary);
+            color: var(--dark);
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .event-ticket-btn:hover {
+            background: #1ed760;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(29, 185, 84, 0.5);
+        }
+        
+        /* Team Section */
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-member {
+            background: var(--card-bg);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 极式, 0.05);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            border-color: rgba(29, 185, 84, 0.3);
+        }
+        
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 3px solid var(--primary);
+        }
+        
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .team-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--light);
+            margin-bottom: 5px;
+        }
+        
+        .team-role {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .team-desc {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        /* Videos Section */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .video-card {
+            background: #1e1e1e;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .video-card:hover {
+            transform: scale(1.02);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .video-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        /* AI Features Section */
+        .ai-features-container {
+            background: linear-gradient(to right, #1a1a1a, #2a2a2a);
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            padding: 80px 0;
+        }
+
+        .ai-feature-box {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px;
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+            border: 1px solid rgba(29, 185, 84, 0.2);
+        }
+        
+        .ai-feature-box h2 {
+            margin-bottom: 20px;
+            color: var(--accent3);
+        }
+        
+        .ai-feature-box p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: var(--gray);
+        }
+
+        .ai-input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: center;
+        }
+
+        .ai-input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid var(--primary);
+            background-color: #2c2c2c;
+            color: var(--text);
+            font-size: 1rem;
+            resize: vertical;
+            min-height: 120px;
+            transition: border-color 极式.3s ease;
+        }
+
+        .ai-input:focus {
+            outline: none;
+            border-color: var(--accent3);
+        }
+
+        .ai-button {
+            cursor: pointer;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            background: var(--primary);
+            color: var(--dark);
+            box-shadow: 0 4px 15px rgba(29, 185, 84, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .ai-button:hover {
+            background: var(--accent3);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 242, 234, 0.6);
+        }
+
+        .ai-button:disabled {
+            background: var(--gray);
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+        
+        .ai-output {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 15px;
+            min-height: 150px;
+            text-align: left;
+            white-space: pre-wrap;
+            line-height: 1.8;
+            font-style: italic;
+            border: 1px solid rgba(29, 185, 84, 0.2);
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+            overflow-y: auto;
+            max-height: 400px;
+        }
+
+        .ai-output ul {
+            list-style-type: none;
+            padding: 极;
+        }
+        
+        .ai-output li {
+            margin-bottom: 10px;
+            font-style: normal;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .ai-output li::before {
+            content: "🎵";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        .review-positive { color: var(--primary); font-weight: 600; }
+        .review-negative { color: var(--accent); font-weight: 600; }
+        .review-mixed { color: var(--accent3); font-weight: 600; }
+
+        /* Social Connect Section */
+        .social-connect-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 极fr));
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .social-platform-card {
+            background: #1e1e1e;
+            padding: 30px 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-platform-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .social-platform-card i {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            transition: color 0.3s ease;
+        }
+
+        .social-platform-card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--light);
+        }
+
+        .social-platform-card.spotify:hover i { color: #1DB954; }
+        .social-platform-card.youtube:hover i { color: #FF0000; }
+        .social-platform极.tiktok:hover i { color: #00F2EA; }
+        .social-platform-card.instagram:hover i { color: #E4405F; }
+        .social-platform-card.facebook:hover i { color: #1877F2; }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--light);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border-radius: 10极;
+            border: 2px solid transparent;
+            background-color: #2c2c2c;
+            color: var(--text);
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 10px;
+            background: var(--primary);
+            color: var(--dark);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+极.submit-btn:hover {
+            background: var(--accent3);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(10, 10, 10, 0.95);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40极;
+        }
+        
+        .footer-column {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-column h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            color: var(--light);
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+           极olor: var(--gray);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-links a i {
+            margin-right: 10px;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                margin-top: 20px;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .hamburger {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+            
+            .tagline {
+                font-size: 1.3rem;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .latest-release {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .album-art {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Mahdi<span>Sultan</span></a>
+                <button class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#latest-release">Latest Release</a></li>
+                    <li><a href="#top-songs">Top Songs</a></li>
+                    <li><a href="#live-events">Live Events</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#collaborations">Collaborations</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div极class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number">160M+</span> YouTube Views
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">50+</span> Original Songs
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2nd</span> Most-Viewed Bengali Song
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-image">
+                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fH极8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Mahdi Sultan">
+                </div>
+                <h1>Mahdi Sultan<br><span>Bangladeshi Singer-Songwriter</span></h1>
+                <p class="tag极e">Soulful melodies with 160M+ YouTube views</p>
+                <p class="hero-text">Record-breaking Bangladeshi artist known for viral hits like "Tor Mon Paray" (160M+ views) and "Mon Bole Tui Shun" (43M+ views). Blending traditional Bengali influences with contemporary sounds.</p>
+                <div>
+                    <a href="#latest-release" class="btn">Listen Now</a>
+                    <a href="#gallery" class="btn btn-outline">View Gallery</a>
+                    <a href="https://www.tiktok.com/@mahdisultan" target="_blank" class="btn btn-tiktok"><i class="fab fa-tiktok"></i> Follow on TikTok</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://open.spotify.com/artist/0lLnprFiaSFIpYQMaif2e9" target="_blank" class="spotify"><i class="fab fa-spotify"></i></a>
+                    <a href="https://www.youtube.com/@mahdisultan1" target="_blank" class="yt"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.tikt极.com/@mahdisultan" target="_blank" class="tiktok"><极 class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/mahdisultan" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/mahdisultan" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Release Section -->
+    <section id="latest-release">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Release</h2>
+            </div>
+            
+            <div class="latest-release">
+                <div class="album-art">
+                    <img src="https://images.unsplash.com/photo-1571330735066-03aaa9429d89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB极MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&极t=crop&w=1170&q=80" alt="Tor Mon Paray (Remix)">
+                </div>
+                <div class="release-info">
+                    <span class="release-date">August 15, 2025</span>
+                    <h3>Tor Mon Paray (Remix) - Single</h3>
+                    <p>1 Song • 162M+ Views on YouTube</p>
+                    <p>The remix of my record-breaking debut track that became the 2nd most-viewed Bengali song globally. This version brings new energy while maintaining the emotional depth of the original.</p>
+                    <a href="https://open.spotify.com/track/your-track-id" target="_blank" class="spotify-btn"><i class="fab fa-spotify"></i> Stream on Spotify</a>
+                    <a href="https://youtube.com/watch?v=your-video-id" target="_blank" class="spotify-btn" style="background: #FF0000; margin-left: 10px;"><i class="fab fa-youtube"></i> Watch on YouTube</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Songs Section -->
+    <section id="top-songs">
+        <div class="container">
+            <div class="section-title">
+                <h2>Top Songs</h2>
+            </div>
+            
+            <div class="top-songs">
+                <div class="song-card">
+                    <div class="song-number">1</div>
+                    <h3 class="song-title">Tor Mon Paray</h3>
+                    <p class="song-info">The record-breaking debut track that became the 2nd most-viewed Bengali song globally.</p>
+                    <span class="song-views">162M+ Views</span>
+                    <a href="https://youtu.be/FAt1d11UOg8" target="_blank" class="song-play"><i class="fas fa-play-circle"></i> Play Now</a>
+                </div>
+                
+                <div class="song-card">
+                    <div class="song-number">2</div>
+                    <h3 class="song-title">Mon B极e Tui Shun</h3>
+                    <p class="song-info">A fan favorite with over 43 million views on YouTube.</p>
+                    <span class="song-views">43M+ Views</span>
+                    <a href="https://youtu.be/NksrfLrV8DY" target="_blank" class="song-play"><i class="fas fa-play-circle"></极> Play Now</a>
+                </div>
+                
+                <div class="song-card">
+                    <div class="song-number">3</div>
+                    <h3 class="song-title">Boleche Mon</h3>
+                    <p class="song-info">A heartfelt expression of emotions through soulful melody.</p>
+                    <span class="song-views">15M+ Views</span>
+                    <a href="https://open.spotify.com/track/your-track-id" target="_blank" class="song-play"><i class="fas fa-play-circle"></i> Play Now</a>
+                </div>
+                
+                <div class="song-card">
+                    <div class="song-number">4</div>
+                    <h3 class="song-title">Pasori Cover</h3>
+                    <p class="song-info">Feat. Jafrin | A beautiful collaboration that brings new life to a classic.</p>
+                    <span class="song-views">8M+ Views</span>
+                    <a href="https://open.spotify.com/track/your-track-id" target="_blank" class="song-play"><i class="fas fa-play-circle"></i> Play Now</a>
+                </div>
+                
+                <div class="song-card">
+                    <div class="song-number">5</div>
+                    <h3 class="song-title">Ovimani Mon Amar</h3>
+                    <p class="song-info">A deeply personal track that connects with listeners on an emotional level.</p>
+                    <span class="song-views">5M+ Views</span>
+                    <a href="https://open.spotify.com/track/your-track-id" target="_blank" class="song-play"><i class="fas fa-play-circle"></i> Play Now</a>
+                </div>
+                
+                <div class="song-card">
+                    <div class="song-number">6</div>
+                    <h3 class="song-title">Sajna</h3>
+                    <p class="song-info">A melodic expression of longing and love that has captured hearts.</p>
+                    <span class="song-views">3M+ Views</极>
+                    <a href="https://open.spotify.com/track/your-track-id" target="_blank" class="song-play"><i class="fas fa-play-circle"></i> Play Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Events Section -->
+    <section id="live-events">
+        <div class="container">
+            <div class="section-title">
+                <h2>Live Events Update & Tickets</h2>
+            </div>
+            
+            <div class="events-container">
+                <div class="event-card">
+                    <span class="event-date">December 15, 2025</span>
+                    <h3 class="event-title">Dhaka Concert</h3>
+                    <span class="event-location">Army Stadium, Dhaka, Bangladesh</span>
+                    <p class="event-description">Join me for a night of music and celebration in my hometown. Featuring all my hit songs and special guest appearances.</p>
+                    <a href="#" class="event-ticket-btn">Get Tickets</a>
+                </div>
+                
+                <div class="event-card">
+                    <span class="event-date">January 20, 2026</span>
+                    <h3 class="event-title">Chittagong Music Festival</h3>
+                    <span class="event-location">Marine Drive, Chittagong, Bangladesh</span>
+                    <p class="event-description">Performing at the largest music festival in Chittagong with other top Bangladeshi artists.</p>
+                    <a href="#" class="event-ticket-btn">Get Tickets</a>
+                </div>
+                
+                <div class="event-card">
+                    <span class="event-date">February 14, 2026</span>
+                    <h3 class="event-title">Valentine's Special Concert</h3>
+                    <span class="event-location">Radisson Blu, Dhaka, Bangladesh</span>
+                    <p class="event-description">A special intimate concert for Valentine's Day featuring romantic songs and duets.</p>
+                    <a href="#" class="event-ticket-btn">Get Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>Gallery</h2>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511735111819-9a3极7709049c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Mahdi Sultan Performance">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3极DB8MHxwaG90by1极YWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Mahdi Sultan Concert">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Mahdi Sultan Recording">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Mahdi Sultan Music">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfH极8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&极=1170&q=80" alt="Mahdi Sultan Live">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3极%3D&auto=format&fit=crop&w=1170&q=80" alt="Mahdi Sultan Stage">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collaborations Section -->
+    <section id="collaborations">
+        <div class="container">
+            <div class="section-title">
+                <h2>Collaborations</h2>
+            </div>
+            
+            <div class="artists-container">
+                <div class="artist-card" data-artist="imran-mahmudul">
+                    <div class="artist-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Imran Mahmudul">
+                    </div>
+                    <h3 class="artist-name">Imran Mahmudul</h3>
+                    <div class="artist-role">Music Composer & Producer</div>
+                    <div class="artist-song">Boleche Mon</div>
+                </div>
+                
+                <div class="artist-card" data-artist="jisan-khan-suvo">
+                    <div class="artist-avatar">
+                        <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671d66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Jisan Khan Suvo">
+                    </div>
+                    <h3 class="artist-name">Jisan Khan Suvo</h3>
+                    <div class="artist-role">Lyricist & Composer</div>
+                    <div class="artist-song">Tor Mon Paray</div>
+                </div>
+                
+                <div class="artist-card" data-artist="belal-khan">
+                    <div class="artist-avatar">
+                        <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Belal Khan">
+                    </div>
+                    <h3 class="artist-name">Belal Khan</h3>
+                    <div class="artist-role">Music Composer & Co-Singer</div>
+                    <div class="artist-song">Hridoy Theke & Lal Sobujer Feriwala</div>
+                </div>
+                
+                <div class="artist-card" data-artist="muhammad-milon">
+                    <div class="artist-avatar">
+                        <img src="https://images.unsplash.com/photo-1477118476589-bff2c5c4cfbb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Muhammad Milon">
+                    </div>
+                    <h3 class="artist-name">Muhammad Milon</h3>
+                    <div class="artist-role">Singer</div>
+                    <div class="artist-song">Khub Jante Icche Kore</div>
+                </div>
+                
+                <div class="artist-card" data-artist="ayon-chaklader">
+                    <div class="artist-avatar">
+                        <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Ayon Chaklader">
+                    </div>
+                    <h3 class="artist-name">Ayon Chaklader</h3>
+                    <div class="artist-role">Music Producer</div>
+                    <div class="artist-song">Tor Mon Paray</div>
+                </div>
+                
+                <div class="artist-card" data-artist="kazi-suvo">
+                    <div class="artist-avatar">
+                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=699&q=80" alt="Kazi Suvo">
+                    </div>
+                    <h3 class="artist-name">Kazi Suvo</h3>
+                    <div class="artist-role">Music Arranger</div>
+                    <div class="artist-song">Various Songs</div>
+                </div>
+                
+                <div class="artist-card" data-artist="puja">
+                    <div class="artist-avatar">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Puja">
+                    </div>
+                    <h3 class="artist-name">Puja</h3>
+                    <div class="artist-role">Co-Artist</div>
+                    <div class="artist-song">Lal Sobujer Feriwala</div>
+                </div>
+                
+                <div class="artist-card" data-artist="nischup-brishty">
+                    <div class="artist-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MH极waG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Nischup Brishty">
+                    </div>
+                    <h3 class="artist-name">Nischup Brishty</h3>
+                    <div class="artist-role">Playback Singer</div>
+                    <div class="artist-song">Various Duets</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mahdi Sultan Team</h2>
+            </div>
+            
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Usssayed Ahmed Protik">
+                    </div>
+                    <h3 class="team-name">Usssayed Ahmed Protik</h3>
+                    <div class="team-role">Band Manager</div>
+                    <p class="team-desc">Oversees all business operations and career strategy</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Master RDX">
+                    </div>
+                    <h3 class="team-name">Master RDX</h3>
+                    <div class="team-role">Music Producer</div>
+                    <p class="team-desc">Works on sound design and production quality</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&极id=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Saiful Islam Roman">
+                    </div>
+                    <h3 class="team-name">Saiful Islam Roman</h3>
+                    <div class="team-role">Creative Director</div>
+                    <p class="team-desc">Designs visuals for albums, posters and music videos</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3极DB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80" alt="Rahim Ahmed">
+                    </div>
+                    <h3 class="team-name">Rahim Ahmed</h3>
+                    <div class="team-role">Social Media Manager</div>
+                    <p class="team-desc">Handles Live Streams, and social media content</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Nayim">
+                    </div>
+                    <h3 class="team-name">Nayim</h3>
+                    <div class="team-role">Event Manager (North America)</div>
+                    <p class="team-desc">Handles all live events schedule and promotion in North America</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="team-avatar">
+                        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=699&q=80" alt="Tanmoy">
+                    </div>
+                    <h3 class="team-name">Tanmoy</h3>
+                    <div class="team-role">Event Manager (India)</div>
+                    <p class="team-desc">Handles all live events, shows and Indian media relations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos">
+        <div class="container">
+            <div class="section-title">
+                <h2>Music Videos</h2>
+            </div>
+            
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/FAt1d11UOg8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Tor Mon Paray</h3>
+                        <p>162M+ Views</极>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class极"video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/NksrfLrV8DY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Mon Bole Tui Shun</h3>
+                        <p>43M+ Views</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/example" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-info">
+                        <h3>Boleche Mon</h3>
+                        <p>15M+ Views</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features Section -->
+    <section class="ai-features-container">
+        <div class="ai-feature-box">
+            <h2>AI Song Title Generator</h2>
+            <p>Generate creative song title ideas based on your mood or theme</p>
+            <div class="ai-input-group">
+                <textarea class="ai-input" placeholder="Describe your song's mood, theme, or inspiration..."></textarea>
+                <button class="ai-button" id="generateTitles">Generate Titles</button>
+            </div>
+            <div class="ai-output" id="titleOutput">
+                Your generated song titles will appear here...
+            </div>
+        </div>
+
+        <div class="ai-feature-box">
+            <h2>Fan Review Sentiment Analyzer</h2>
+            <p极Paste fan comments to analyze sentiment and feedback patterns</p>
+            <div class="ai-input-group">
+                <textarea class="ai-input" placeholder="Paste fan comments or reviews here..."></textarea>
+                <button class="ai-button" id="analyzeSentiment">Analyze Sentiment</button>
+            </div>
+            <div class="ai-output" id="sentimentOutput">
+                Your sentiment analysis will appear here...
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Connect Section -->
+    <section id="social-connect">
+        <div class="container">
+            <div class="section-title">
+                <h2>Connect With Me</h2>
+            </div>
+            
+            <div class="social-connect-grid">
+                <a href="https://open.spotify.com/artist/0极LnprFiaSFIpYQMaif2e9" target="_blank" class="social-platform-card spotify">
+                    <i class="fab fa-sp极ify"></i>
+                    <h3>Spotify</h3>
+                </a>
+                
+                <a href="https://www.youtube.com/@mahdisultan1" target="_blank" class="social-platform-card youtube">
+                    <i class="fab fa-youtube"></i>
+                    <h3>YouTube</h3>
+                </a>
+                
+                <a href="https://www.tiktok.com/@mahdisultan" target="_blank" class="social-platform-card tiktok">
+                    <i class="fab fa-tiktok"></i>
+                    <h3>TikTok</h3>
+                </a>
+                
+                <a href="https://www.instagram.com/mahdisultan" target="_blank" class="social-platform-card instagram">
+                    <i class="fab fa-instagram"></i>
+                    <h3>Instagram</h3>
+                </a>
+                
+                <a href="https://www.facebook.com/mahdisultan" target="_blank" class="social-platform-card facebook">
+                    <i class="fab fa-facebook"></i>
+                    <h3>Facebook</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Mahdi Sultan</h3>
+                    <p>Record-breaking Bangladeshi singer-songwriter with 160M+ YouTube views. Creating soulful music that blends traditional Bengali elements with contemporary sounds.</p>
+                    <div class="social-icons">
+                        <a href="https://open.spotify.com/artist/0lLnprFiaSFIpYQMaif2e9" target="_blank"><i class="fab fa-spotify"></i></a>
+                        <a href="https://www.youtube.com/@mahdisultan1" target="_blank" class="yt"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@mahdisultan" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/mahdisultan" target="_blank"><i class="fab fa-instagram"></极></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#latest-release"><i class="fas fa-chevron-right"></i> Latest Release</a></li>
+                        <li><a href="#top-songs"><i class="fas fa-chevron-right"></i> Top Songs</a></li>
+                        <li><a href="#live-events"><i class="fas fa-chevron-right"></i> Live Events</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="#collaborations"><i class="fas fa-chevron-right"></i> Collaborations</a></li>
+                        <li><a href="#team"><i class="fas fa-chevron-right"></i> Team</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:contactmahdisultan@gmail.com"><i class="fas fa-envelope"></i> contactmahdisultan@gmail.com</a></li>
+                        <li><a href="https://www.tiktok.com/@mahdisultan" target="_blank"><i class="fab fa-tiktok"></i> @mahdisultan</a></li>
+                        <li><a href="https://open.spotify.com/artist/0lLnpr极iaSFIpYQMaif2e9" target="_blank"><i class="fab fa-spotify"></i> Spotify Artist Profile</a></li>
+                        <li><a href="极ttps://www.youtube.com/@mahdisultan1" target="_blank"><i class="fab fa-youtube"></i> YouTube Channel</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 Mahdi Sultan. All rights reserved. | Designed with passion for music
+            </div>
+        </div>
+    </footer>
+
+    <!-- Artist Details Modal -->
+    <div class="modal" id="artistModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <div class="modal-content">
+            <div class="modal-artist-details" id="modalArtistDetails">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+                
+                // Close mobile menu if open
+                navLinks.classList.remove('active');
+            });
+        });
+        
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // AI Features functionality
+        document.getElementById('generateTitles').addEventListener('click', function() {
+            const input = document.querySelector('.ai-input').value;
+            const output = document.getElementById('titleOutput');
+            
+            if (!input) {
+                output.innerHTML = 'Please enter some inspiration first...';
+                return;
+            }
+            
+            output.innerHTML = 'Generating creative titles...';
+            
+            // Simulate AI processing
+            setTimeout(() => {
+                const titles = [
+                    "Eternal Monsoon Melody",
+                    "Heartstrings of Dhaka",
+                    "Silent Whispers in the Rain",
+                    "Bengal Twilight Serenade",
+                    "Soul of the Padma River",
+                    "Monsoon Dreams Unfold"
+                ];
+                
+                let html = '<ul>';
+                titles.forEach(title => {
+                    html += `<li>${title}</li>`;
+                });
+                html += '</ul>';
+                
+                output.innerHTML = html;
+            }, 1500);
+        });
+        
+        document.getElementById('analyzeSentiment').addEventListener('click', function() {
+            const input = document.querySelectorAll('.ai-input')[1].value;
+            const output = document.getElementById('sentimentOutput');
+            
+            if (!input) {
+                output.innerHTML = 'Please paste some comments first...';
+                return;
+            }
+            
+            output.innerHTML = 'Analyzing sentiment...';
+            
+            // Simulate AI processing
+            setTimeout(() => {
+                output.innerHTML = `
+                    <p><span class="review-positive">85% Positive</span> sentiment detected from recent comments.</p>
+                    <p>Fans are particularly loving your <span class="review-positive">emotional vocals</span> and <span class="review-positive">melodic compositions</span>.</p>
+                    <p>Some suggestions for improvement: <span class="review-mixed">more variety in instrumentation</span>.</p>
+                `;
+            }, 1500);
+        });
+        
+        // Artist details modal functionality
+        const artistModal = document.getElementById('artistModal');
+        const modalArtistDetails = document.getElementById('modalArtistDetails');
+        const modalClose = document.getElementById('modalClose');
+        
+        // Artist collaboration details
+        const artistDetails = {
+            'imran-mahmudul': {
+                name: 'Imran Mahmudul',
+                role: 'Music Composer & Producer',
+                song: 'Boleche Mon',
+                details: 'Imran Mahmudul is a talented music composer and producer who worked on the hit song "Boleche Mon". He created the beautiful musical arrangement that perfectly complements Mahdi Sultan\'s vocals. His expertise in blending traditional Bengali instruments with contemporary sounds helped make the song a massive success.'
+            },
+            'jisan-khan-suvo': {
+                name: 'Jisan Khan Suvo',
+                role: 'Lyricist & Composer',
+                song: 'Tor Mon Paray',
+                details: 'Jisan Khan Suvo is the creative mind behind the lyrics and composition of "Tor Mon Paray". His poetic lyrics captured the emotions of love and longing that resonated with millions of listeners. His musical composition provided the perfect foundation for Mahdi Sultan\'s vocal performance.'
+            },
+            'belal-khan': {
+                name: 'Belal Khan',
+                role: 'Music Composer & Co-Singer',
+                song: 'Hridoy Theke & Lal Sobujer Feriwala',
+                details: 'Belal Khan collaborated with Mahdi Sultan as both a music composer and co-singer. He composed the music for "Hridoy Theke" and provided vocal accompaniment in "Lal Sobujer Feriwala". His versatile talent in both composition and performance added depth to these collaborative projects.'
+            },
+            'muhammad-milon': {
+                name: 'Muhammad Milon',
+                role: 'Singer',
+                song: 'Khub Jante Icche Kore',
+                details: 'Muhammad Milon is a gifted singer who collaborated with Mahdi Sultan on the song "Khub Jante Icche Kore". His distinctive vocal style complemented Mahdi\'s voice, creating a beautiful duet that showcases their vocal harmony and emotional delivery.'
+            },
+            'ayon-chaklader': {
+                name: 'Ayon Chaklader',
+                role: 'Music Producer',
+                song: 'Tor Mon Paray',
+                details: 'Ayon Chaklader served as the music producer for the hit song "Tor Mon Paray". His expertise in sound engineering and production quality helped shape the final sound of the track, ensuring it had the professional polish that contributed to its viral success.'
+            },
+            'kazi-suvo': {
+                name: 'Kazi Suvo',
+                role: 'Music Arranger',
+                song: 'Various Songs',
+                details: 'Kazi Suvo has worked as a music arranger on several of Mahdi Sultan\'s songs. His skill in creating intricate musical arrangements that enhance the vocal performance has been instrumental in the production quality of multiple tracks in Mahdi\'s discography.'
+            },
+            'puja': {
+                name: 'Puja',
+                role: 'Co-Artist',
+                song: 'Lal Sobujer Feriwala',
+                details: 'Puja collaborated with Mahdi Sultan as a co-artist on the song "Lal Sobujer Feriwala". Her vocal performance added a contrasting texture to the track, creating a beautiful duet that showcased the chemistry between the two artists.'
+            },
+            'nischup-brishty': {
+                name: 'Nischup Brishty',
+                role: 'Playback Singer',
+                song: 'Various Duets',
+                details: 'Nischup Brishty is a playback singer who has collaborated with Mahdi Sultan on several duets. Her melodious voice and ability to convey emotion through song have made their collaborations particularly memorable for fans.'
+            }
+        };
+        
+        // Add click event to artist cards
+        document.querySelectorAll('.artist-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const artistId = card.getAttribute('data-artist');
+                const artist = artistDetails[artistId];
+                
+                if (artist) {
+                    modalArtistDetails.innerHTML = `
+                        <div class="modal-artist-avatar">
+                            <img src="${card.querySelector('.artist-avatar img').src}" alt="${artist.name}">
+                        </div>
+                        <h3 class="modal-artist-name">${artist.name}</h3>
+                        <div class="modal-artist-role">${artist.role} • ${artist.song}</div>
+                        <div class="modal-collab-details">
+                            <h4>Collaboration Details</h4>
+                            <p>${artist.details}</p>
+                        </div>
+                    `;
+                    
+                    artistModal.classList.add('show');
+                }
+            });
+        });
+        
+        // Close modal
+        modalClose.addEventListener('click', () => {
+            artistModal.classList.remove('show');
+        });
+        
+        // Close modal when clicking outside the content
+        window.addEventListener('click', (event) => {
+            if (event.target === artistModal) {
+                artistModal.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
